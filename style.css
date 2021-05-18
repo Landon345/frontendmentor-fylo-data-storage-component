@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+  margin-bottom: 100px;
+}
+.attribution a {
+  color: hsl(228, 38%, 70%);
+}
+
+body {
+  background-image: url("./images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+strong {
+  color: white;
+  font-weight: 700;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  border-radius: 40px;
+  height: 15px;
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  border: none;
+  border-radius: 50%;
+  height: 13px;
+  width: 13px;
+  max-width: 80px;
+  position: relative;
+  bottom: -1px;
+  background-color: #fff;
+  cursor: -webkit-grab;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: auto;
+}
+.fylo-container {
+  width: 100%;
+  text-align: left;
+  background-color: hsl(228, 56%, 26%);
+  padding: 40px;
+  margin: 10px;
+  border-radius: 10px 100px 10px 10px;
+}
+.icons {
+  display: flex;
+  margin-top: 20px;
+}
+.icon {
+  margin-right: 15px;
+  padding: 10px;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 7px;
+}
+.slider-container {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  color: hsl(231, 16%, 76%);
+  width: 100%;
+  padding: 40px 40px 0 40px;
+  margin: 10px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: hsl(228, 56%, 26%);
+}
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+#range {
+  width: 100%;
+  padding: 0px;
+  margin: 20px 0 10px 0;
+  border-radius: 40px;
+}
+.gb-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  color: rgb(82, 82, 82);
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  margin: auto;
+  top: 20px;
+}
+.gb-left-value {
+  font-size: 30px;
+  color: black;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: hsl(229, 57%, 11%);
+    background-image: url("./images/bg-desktop.png");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .container {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 360px;
+  }
+  .fylo-container {
+    width: 100%;
+    text-align: left;
+    background-color: hsl(228, 56%, 26%);
+    padding: 70px 40px 60px 40px;
+    margin: 10px;
+    border-radius: 10px 100px 10px 10px;
+  }
+  .icons {
+    margin-top: 40px;
+  }
+  .slider-container {
+    text-align: left;
+    height: 140px;
+    padding: 50px 20px 0 20px;
+  }
+  #range {
+    margin: 10px 0 5px 0;
+  }
+  .gb-left {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 130px;
+    margin: auto;
+    top: -90%;
+    left: 30%;
+  }
+}

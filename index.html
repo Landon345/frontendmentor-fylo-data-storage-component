@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style></style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="fylo-container">
+        <img src="./images/logo.svg" alt="logo" />
+        <div class="icons">
+          <img src="./images/icon-document.svg" alt="document" class="icon" />
+          <img src="./images/icon-folder.svg" alt="folder" class="icon" />
+          <img src="./images/icon-upload.svg" alt="upload" class="icon" />
+        </div>
+      </div>
+      <div class="slider-container">
+        <p>
+          You’ve used<strong> <span id="output-val"></span>GB </strong>of your
+          storage
+        </p>
+        <input
+          value="815"
+          type="range"
+          name="range"
+          id="range"
+          min="0"
+          max="1000"
+        />
+        <div class="slider-labels">
+          <p>0 GB</p>
+          <p>1000 GB</p>
+        </div>
+        <div class="gb-left">
+          <p><span class="gb-left-value" id="output"></span>GB LEFT</p>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Landon Schlangen</a>.
+    </div>
+  </body>
+
+  <script>
+    myFunction();
+    document.getElementById("range").oninput = function () {
+      myFunction();
+    };
+
+    function myFunction() {
+      var val = document.getElementById("range").value; //gets the oninput value
+      document.getElementById("output").innerHTML = 1000 - val + "  "; //displays this value to the html page
+      document.getElementById("output-val").innerHTML = val + " ";
+    }
+  </script>
+</html>
